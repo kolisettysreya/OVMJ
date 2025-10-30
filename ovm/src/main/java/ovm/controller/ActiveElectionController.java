@@ -24,7 +24,7 @@ import ovm.services.ElectionResultService;
 
 @RestController
 @RequestMapping("/active-elections")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class ActiveElectionController {
 
     @Autowired
@@ -112,4 +112,5 @@ public class ActiveElectionController {
             return ResponseEntity.badRequest().body(Map.of("message", "Failed to delete election"));
         }
     }
+
 }
